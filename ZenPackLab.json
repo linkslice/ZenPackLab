@@ -29,7 +29,7 @@
            "Name": "zenpacklab",
            "Purpose": "export",
            "Protocol": "tcp",
-           "PortNumber": 42069,
+           "PortNumber": 443,
            "PortTemplate": "",
            "VirtualAddress": "",
            "Application": "ZenPackLab",
