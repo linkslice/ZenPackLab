@@ -11,10 +11,10 @@ if ( !is_null($_GET["nagios"]) )
 }
 
 echo "Generating ZenPack";
-chdir('CustomScriptBuilder')
+chdir('CustomScriptBuilder');
 $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version");
 
-echo "<a href='CustomScriptBuilder/$zenpack_out'>$zenpack_out</a>";
+echo "<a href='CustomScriptBuilder/$makepack_out'>$makepack_out</a>";
 
 
 
