@@ -21,3 +21,6 @@ A: No, no you shouldn't.<br>
 Although you shouldn't use this in any environment you care about, I'd still welcome bug fixes and PRs. I mostly just wanted to get it working and pushed onto the internet.
 
 [1] https://github.com/linkslice/ZenPackBuilderDocker
+
+
+![](https://github.com/linkslice/ZenPackLab/blob/main/ZenPackLab.gif)
