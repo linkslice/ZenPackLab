@@ -35,8 +35,8 @@
            "Application": "ZenPackLab",
            "ApplicationTemplate": "",
            "AddressConfig": {
-             "Port": 0,
-             "Protocol": ""
+             "Port": 42069,
+             "Protocol": "tcp"
            },
            "VHosts": [
              "zenpacklab"
