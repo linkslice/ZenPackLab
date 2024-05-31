@@ -4,7 +4,10 @@ Q: What is it?<br>
 A: This is for running the ZenPackBuilderDocker[1] container with a (crappy) web ui. Right now it looks like a bad anglefire page from 1996, but it's a (sorta) funtioning PoC.
 
 Q: Why?<br>
-A: Because I thought it would be fun. I was mostly wrong.
+A: Because my GF went on vacation and I thought it would be more fun than binge drinking. I was mostly wrong.
+
+Q: Should I use this?<br>
+A: No, no you shouldn't.<br>
 
 Q: How do I use it?<br>
 A1: Well, there's a couple ways. If you have an on-prem zenoss system you can add the template in control center, and then deploy an applciation. Click the start button.<br>
