@@ -7,3 +7,11 @@
     <input type=submit>
  </form>
 
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select scripts to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="input script" name="submit">
+</form>
+
+</html>
