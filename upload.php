@@ -1,5 +1,5 @@
 <?php
-$target_dir = "libexec/";
+$target_dir = "CustomScriptBuilder/libexec/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
