@@ -27,4 +27,4 @@ if ($uploadOk == 0) {
 }
 ?>
 
-go <a hreaf="/">back</a> to upload more files or create the pack
+go <a href="/">back</a> to upload more files or create the pack
