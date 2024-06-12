@@ -1,17 +1,17 @@
 {
    "ID": "",
-   "Name": "ZenPackLab",
+   "Name": "ZenPackLab Ubuntu",
    "Version": "1",
    "Description": "ZenPackLab / created by Bryan Irvine",
    "Services": [
      {
-       "Name": "ZenPackLab",
-       "Title": "ZenPackLab",
+       "Name": "ZenPackLab Ubuntu",
+       "Title": "ZenPackLab Ubuntu",
        "Version": "1",
        "Command": "/bin/sh /usr/src/zenpacklab/phpstart.sh",
        "Description": "ZenPackLab / create packs using a web 1.0 wizard",
        "Tags": null,
-       "ImageID": "linkslice/zenpacklab:centos",
+       "ImageID": "linkslice/zenpacklab:ubuntu",
        "Instances": {
          "Min": 1,
          "Max": 1,
