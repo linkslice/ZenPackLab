@@ -22,7 +22,7 @@ Q: Which tag should I use?<br>
 A: If you're running an on-prem version 6.7 or earlier you should use `centos`. If later versions of cloud you should use `ubuntu`.<br>
 
 Q: Should I use this?<br>
-A: No, no you shouldn't.<br>
+A: Bro, we've been over this<br>
 
 Although you shouldn't use this in any environment you care about, I'd still welcome bug fixes and PRs. I mostly just wanted to get it working and pushed onto the internet.
 
