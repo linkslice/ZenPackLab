@@ -18,6 +18,12 @@ After doing any of the 3 a horrible web page will appear that will allow you to 
 Q: Should I use this?<br>
 A: No, no you shouldn't.<br>
 
+Q: Which tag should I use?
+A: If you're running an on-prem version 6.7 or earlier you should use centos. If later versions of cloud you should use ubuntu.
+
+Q: Should I use this?
+A: No, no you shouldn't.
+
 Although you shouldn't use this in any environment you care about, I'd still welcome bug fixes and PRs. I mostly just wanted to get it working and pushed onto the internet.
 
 [1] https://github.com/linkslice/ZenPackBuilderDocker
