@@ -1,0 +1,93 @@
+{
+   "ID": "",
+   "Name": "ZenPackLab Centos",
+   "Version": "1",
+   "Description": "ZenPackLab / created by Bryan Irvine",
+   "Services": [
+     {
+       "Name": "ZenPackLab Centos",
+       "Title": "ZenPackLab Centos",
+       "Version": "1",
+       "Command": "/bin/sh /usr/src/zenpacklab/phpstart.sh",
+       "Description": "ZenPackLab / create packs using a web 1.0 wizard",
+       "Tags": null,
+       "ImageID": "linkslice/zenpacklab:centos",
+       "Instances": {
+         "Min": 1,
+         "Max": 1,
+         "Default": 1
+       },
+       "ChangeOptions": null,
+       "Launch": "auto",
+       "HostPolicy": "",
+       "Hostname": "",
+       "Privileged": false,
+       "ConfigFiles": {},       
+       "Context": null,
+       "Endpoints": [
+         {
+           "Name": "zenpacklab",
+           "Purpose": "export",
+           "Protocol": "tcp",
+           "PortNumber": 42069,
+           "PortTemplate": "",
+           "VirtualAddress": "",
+           "Application": "ZenPackLab",
+           "ApplicationTemplate": "",
+           "AddressConfig": {
+             "Port": 42069,
+             "Protocol": "tcp"
+           },
+           "VHosts": [
+             "zenpacklab"
+           ]
+         }                  
+       ],
+       "Services": [],
+       "Tasks": null,
+       "LogFilters": null,
+       "Volumes":null,
+       "LogConfigs": null,
+       "Snapshot": {
+         "Pause": "",
+         "Resume": ""
+       },
+       "RAMCommitment": "64M",
+       "CPUCommitment": 1,
+       "Runs": null,
+       "Actions": null,
+       "HealthChecks": {
+           "health": {
+               "Script": "echo 0",
+               "Interval": 10,
+               "Timeout": 10
+           }
+       },       
+       "Prereqs": null,
+       "MonitoringProfile": {
+         "MetricConfigs": null,
+         "GraphConfigs": null,
+         "ThresholdConfigs": null
+       },
+       "MemoryLimit": 0,
+       "CPUShares": 0,
+       "PIDFile": ""
+     }
+   ],
+   "ConfigFiles": null,
+   "ServicedVersion": {
+     "Version": "1.0.7",
+     "Date": "Sat Oct 24 15:30:13 UTC 2015",
+     "Gitbranch": "HEAD",
+     "Gitcommit": "9141bcd-dirty",
+     "Giturl": "",
+     "Buildtag": "0",
+     "Release": "1.0.7-1"
+   },
+   "TemplateVersion": {
+     "branch": "unknown",
+     "commit": "unknown",
+     "repo": "unknown",
+     "tag": "unknown"
+   }
+}
