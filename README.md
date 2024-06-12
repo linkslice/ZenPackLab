@@ -19,7 +19,7 @@ Q: Should I use this?<br>
 A: No, no you shouldn't.<br>
 
 Q: Which tag should I use?
-A: If you're running an on-prem version 6.7 or earlier you should use centos. If later versions of cloud you should use ubuntu.
+A: If you're running an on-prem version 6.7 or earlier you should use `centos`. If later versions of cloud you should use `ubuntu`.
 
 Q: Should I use this?
 A: No, no you shouldn't.
