@@ -20,7 +20,7 @@
 
 $packs = glob('*.egg');
 foreach($packs as $pack){
-  print "<a href='$pack'>$pack</a><br>"
+  print "<a href='$pack'>$pack</a><br>";
 }
 ?>
 
