@@ -4,7 +4,7 @@
     Pack Name:<input type=text name=packname><br>
     Version: <input type=text name=version><br>
     install nagios plugins?:<input type=checkbox name=nagios><br>
-    create symlinks during install?<input type=checkbox name=symlink> (don't don't this unless you know why)<br>
+    create symlinks during install?<input type=checkbox name=symlink> (don't do this unless you know why)<br>
     <input type=submit value="create pack">
  </form>
 
