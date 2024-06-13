@@ -10,19 +10,19 @@ chdir('CustomScriptBuilder');
 
 if ( !is_null($_GET["nagios"]) )
 {
-    if ( !is_null($_GET["symlink"]) )
+    if ( $_GET["symlink"] )
     {
-        $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version -p");
-    }else{
         $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version -p -s");
+    }else{
+        $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version -p");
     }
 
 }else{
-    if ( !is_null($_GET["symlink"]) )
+    if ( $_GET["symlink"] )
     {
-      $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version");
-    }else{
       $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version -s");
+    }else{
+      $makepack_out = shell_exec("/bin/bash makepack.sh -a '".$author."' -n $packname -v $version");
     }
 }
 
