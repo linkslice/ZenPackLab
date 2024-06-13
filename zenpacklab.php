@@ -3,6 +3,7 @@
 $author = $_GET["author"];
 $packname = $_GET["packname"];
 $version = $_GET["version"];
+$symlink = $_GET["symlink"];
 
 echo "Generating ZenPack<br>";
 chdir('CustomScriptBuilder');
@@ -31,6 +32,6 @@ foreach($eggs as $egg) {
 }
 
 
-
 ?>
 
+<a href='/'>Start Again</a>
