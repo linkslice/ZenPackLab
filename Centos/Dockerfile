@@ -8,5 +8,6 @@ RUN yum install -y php php-common
 EXPOSE 42069
 WORKDIR /usr/src/zenpacklab
 COPY . .
+COPY Centos/ignorecache.txt /tmp/
 RUN git clone https://github.com/linkslice/CustomScriptBuilder.git
 ENTRYPOINT ["/bin/sh", "/usr/src/zenpacklab/phpstart.sh"]

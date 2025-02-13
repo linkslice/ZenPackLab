@@ -8,24 +8,6 @@ if (!is_dir($upload_dir)) {
 }
 
 $feedback_message = ''; // Store feedback message
-$humorous_messages = [
-    "Why don't you just try uploading all of metasploit next time?",
-    "Would you like me to just upload the entire internet?",
-    "Perhaps upload a virus while you're at it?",
-    "Are you sure this isn't a malicious file? Just checking.",
-    "Maybe a small text file would be a good place to start?",
-    "No need to upload a 4GB file, we're not running a datacenter here.",
-    "The server said no because it didn’t *feel* like it.",
-    "Your file was rejected because the system is going through a *phase*. It’ll be back to normal tomorrow.",
-    "The file didn’t upload because the server decided to start *acting like a diva* today.",
-    "This file was too *dangerous* for the system. It was *way* too edgy.",
-    "It seems your file just didn’t *mesh* with the server’s inner zen.",
-    "We couldn’t upload your file because the server is on *vacation*. Please try again in a week.",
-    "The file didn’t upload because the system is currently being *re-trained*. Check back later for better results.",
-    "Your file was rejected because it was just *too ahead of its time*.",
-    "Upload failed because the file was too *perfect*—the system couldn’t handle it."
-];
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete'])) {
@@ -41,23 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $file_name = basename($_FILES['fileToUpload']['name']);
         $file_extension = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $target_file = $upload_dir . $file_name;
-
-        // Check for invalid file type
+        
         if (in_array($file_extension, $disallowed_extensions)) {
-            $feedback_message = "Invalid file type: $file_extension - " . $humorous_messages[array_rand($humorous_messages)];
-	    $error = true;
-        } 
-        // Check for file size
-        elseif ($_FILES['fileToUpload']['size'] > 500000) {
-            $feedback_message = "File is too large. " . $humorous_messages[array_rand($humorous_messages)];
-	    $eror = true;
-        } 
-        // Upload the file
-        else {
+            $feedback_message = "Invalid file type.";
+        } elseif ($_FILES['fileToUpload']['size'] > 500000) {
+            $feedback_message = "File is too large.";
+        } else {
             if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)) {
                 $feedback_message = "File $file_name uploaded successfully.";
             } else {
-                $feedback_message = "Error uploading file. " . $humorous_messages[array_rand($humorous_messages)];
+                $feedback_message = "Error uploading file.";
             }
         }
     }
@@ -291,7 +266,6 @@ $files = is_dir($upload_dir) ? array_diff(scandir($upload_dir), array('.', '..')
         <div class="dropdown-menu" id="dropdownMenu">
             <a href="index.php">ZenPack Builder</a>
             <a href="upload.php">File Manager</a>
-            <a href="zenpacklab.php">ZenPacks</a>
         </div>
     </header>
 
@@ -300,7 +274,7 @@ $files = is_dir($upload_dir) ? array_diff(scandir($upload_dir), array('.', '..')
 
         <!-- Feedback message -->
         <?php if ($feedback_message): ?>
-            <div class="feedback-message <?php echo $error ? 'error' : 'success'; ?>" id="feedbackMessage">
+            <div class="feedback-message <?php echo (strpos($feedback_message, 'Error') !== false) ? 'error' : 'success'; ?>" id="feedbackMessage">
                 <?php echo htmlspecialchars($feedback_message); ?>
             </div>
         <?php endif; ?>
